@@ -19,6 +19,7 @@
   if (navigator.share) {
     navigator.share(message);
   } else {
+    alert("invio messaggio");
     window.parent.postMessage({
       type: 'share',
       message: message,
