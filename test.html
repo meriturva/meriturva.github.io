@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <script src="script.js"></script>
+    <!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
+  </head>
+  <body>
+    <h1>Ciao Diego!</h1>
+    <button onclick="share()">Share</button>
+  </body>
+  
+  <script>
+    function share() {
+  var message = {
+    title: 'mobiForge: Web Share API',
+    text: 'Check out this great article about the Web Share API',
+    url: 'https://mobiforge.com/design-development/web-share-api',
+  };
+  if (navigator.share) {
+    navigator.share(message);
+  } else {
+    window.parent.postMessage({
+      type: 'share',
+      message: message,
+    });
+  }
+}
+  </script>
+</html>
