@@ -10,14 +10,13 @@
   <script>
     function share() {
   var message = {
-    title: 'mobiForge: Web Share API',
-    text: 'Check out this great article about the Web Share API',
-    url: 'https://mobiforge.com/design-development/web-share-api',
+    title: 'Sto cazzo',
+    text: 'Che bel testo del cavolo',
+    url: 'http://www.stocazzo.biz/',
   };
   if (navigator.share) {
     navigator.share(message);
   } else {
-    alert("invio messaggio");
     window.parent.postMessage({
       type: 'share',
       message: message,
